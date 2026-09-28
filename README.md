@@ -1,18 +1,48 @@
 # Python Agent Memory 🧠
 
-A lightweight, modular, and persistent memory system for AI Agents built with Python, ChromaDB, and OpenAI.
+A simple Python-based memory system for AI agents that allows an agent to remember information and recall it later using keyword-based search.
 
-### How It Works? ⚙️
+## ✨ Features
 
-The working is based on 3 simple steps:
+- 🧠 Store information in agent memory
+- 🔍 Recall previously stored information
+- 💬 Interactive command-line agent
+- 🐍 Built with Python
+- ⚡ Simple and lightweight
+- 🧩 Easy to extend for AI agent projects
 
-**1. Embedding (Text to Numbers)**
-When you call `remember()`, the text is not saved as plain text. ChromaDB converts the text into a high-dimensional vector (a list of numbers) using an embedding model.
-Example: `"Fari lives in gujrat"` -> `[0.23, 0.89, 0.12, ...]`
+## ⚙️ How It Works
 
-**2. Storage (Vector Database)**
-These vectors are stored locally in a persistent ChromaDB database on your machine. No cloud, no data leak. It also stores metadata like user name and timestamp.
+The project works in three simple steps:
 
-**3. Semantic Recall (Meaning-based Search)**
-When you call `recall("Where does Fari live?")`, your query is also converted into a vector. The system then calculates cosine similarity between your query vector and all stored vectors and returns the top 3 closest matches.
-This is why it can find "Pesh
+### 1. Remember
+
+The agent receives information and stores it in its memory.
+
+### 2. Store
+
+The information is saved in the agent's memory list.
+
+### 3. Recall
+
+When the user asks something, the agent searches its stored memories and returns matching information.
+
+```text
+User
+  ↓
+AI Agent
+  ↓
+Remember Information
+  ↓
+Store in Memory
+  ↓
+User Query
+  ↓
+Search Memory
+  ↓
+Recall Informationpython-agent-memory/
+├── README.md
+├── app.py
+├── main.py
+└── requirements.txt
+ 
